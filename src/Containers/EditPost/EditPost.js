@@ -39,7 +39,7 @@ class EditPost extends Component {
       date: moment().format('LLL'),
     };
 
-    await axiosAPI.put('/posts/' + id + '.json', newPostData);
+    await axiosAPI.patch('/posts/' + id + '.json', newPostData);
 
     this.props.history.replace('/');
   };
